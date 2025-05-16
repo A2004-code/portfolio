@@ -1,0 +1,128 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(24, 24, 24, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid #e600ff;
+  box-shadow: 0 0 15px rgba(230, 0, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-brand:hover .profile-pic {
+  border-color: #d100e6;
+  box-shadow: 0 0 20px rgba(230, 0, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:not(.btn)::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #e600ff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:not(.btn):hover {
+  color: #e600ff;
+}
+
+.nav-links a:not(.btn):hover::after {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  
+  .nav-links {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+.hire-btn {
+  background: #e600ff;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  padding: 0.6rem 1.4rem;
+  margin-left: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 12px rgba(230, 0, 255, 0.4);
+  display: inline-block;
+}
+
+.hire-btn:hover {
+  background: #d100e6;
+  color: #fff;
+  box-shadow: 0 0 24px rgba(230, 0, 255, 0.6);
+}
+
+.main-content {
+  padding-top: 90px;
+} 
