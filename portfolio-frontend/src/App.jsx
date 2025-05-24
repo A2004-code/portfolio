@@ -14,6 +14,7 @@ import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import ThankYou from './pages/ThankYou';
 import './styles/global.css';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <Analytics />
     </Router>
   );
 }
